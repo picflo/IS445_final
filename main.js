@@ -4,15 +4,14 @@ var input2 = document.getElementById("number2");
 var result = document.getElementById("result");
 
 const checkPrime = (nb) => {
-  if (nb%2 == 0)
-		return true;
-	else
-    return false;
+  if (nb % 2 == 0) return true;
+  else return false;
 };
 
 const findPrimeNb = (nb1, nb2) => {
   let primeNb = [];
 
+  if (nb1 === nb2) return 0;
   if (nb1 > nb2) {
     let tmp;
     tmp = nb1;
