@@ -4,10 +4,10 @@ var input2 = document.getElementById("number2");
 var result = document.getElementById("result");
 
 const checkPrime = (nb) => {
-  for (let i = 2; i < nb; i++) {
-    if (nb % i === 0) return false;
-  }
-  return true;
+  if (nb%2 == 0)
+		return true;
+	else
+    return false;
 };
 
 const findPrimeNb = (nb1, nb2) => {
@@ -41,7 +41,7 @@ const handler = function (e) {
 
     if (nb1 >= 2 && nb1 <= 100 && nb2 >= 2 && nb2 <= 100) {
       var primeNb = findPrimeNb(nb1, nb2);
-      var res = "There are " + primeNb.length + " prime numbers.";
+      var res = "There are " + primeNb.length + " even numbers:";
       if (primeNb.length > 0) {
         res = res + primeNb;
       }
